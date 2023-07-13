@@ -22,7 +22,7 @@ class TrattaFactory extends Factory
             'stazione_di_arrivo' => fake() -> address(),
             'orario_di_partenza' => fake() -> time(),
             'orario_di_arrivo' => fake() -> time(),
-            'codice_treno' => fake() -> numerify('##########'),
+            'codice_treno' => fake() -> unique() -> numerify('##########'),
             'numero_carrozze' => fake() -> numberBetween(5, 15),
             'in_orario' => fake() -> boolean(),
             'cancellato' => fake() -> boolean()
